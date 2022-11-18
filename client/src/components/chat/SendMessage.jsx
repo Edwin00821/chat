@@ -7,7 +7,7 @@ import { BiMicrophone, BiMap } from "react-icons/bi";
 
 import io from "socket.io-client";
 
-const socket = io("http://localhost:3001");
+const socket = io("https://chat-production-f865.up.railway.app");
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
