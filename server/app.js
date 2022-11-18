@@ -22,11 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(join(__dirname, "../client/build")));
 
 const server = http.createServer(app);
-const io = new SocketServer(server, {
-  cors: {
-    origin: "https://chat-ten-rho.vercel.app/",
-  },
-});
+const io = new SocketServer(server);
 
 // Routes
 // app.use("/", indexRoutes);
