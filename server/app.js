@@ -22,7 +22,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(join(__dirname, "../client/build")));
 
 const server = http.createServer(app);
-const io = new SocketServer(server);
+const io = new SocketServer(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+});
 
 // Routes
 // app.use("/", indexRoutes);

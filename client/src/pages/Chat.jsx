@@ -22,7 +22,7 @@ const InitialChat = [
 
 import io from "socket.io-client";
 
-const socket = io("https://chat-production-f865.up.railway.app/");
+const socket = io("https://chat-production-f865.up.railway.app");
 
 const Chat = () => {
   const chatRef = useRef(null);
