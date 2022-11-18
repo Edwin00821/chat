@@ -22,8 +22,7 @@ const InitialChat = [
 
 import io from "socket.io-client";
 
-const socket = io("http://localhost:3001");
-console.log(socket);
+const socket = io("https://chat-production-f865.up.railway.app/");
 
 const Chat = () => {
   const chatRef = useRef(null);
@@ -35,7 +34,6 @@ const Chat = () => {
   const [lastMessage, setLastMessage] = useState("¿En que te puedo ayudar?");
 
   const setMessage = ({ message, user }) => {
-    console.log({ message, user });
     if (user !== localStorage.getItem("user")) {
       setChats((prev) => [
         ...prev,

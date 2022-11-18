@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import Chat from "./pages/chat";
+import Chat from "./pages/Chat";
 
 import "./index.css";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
